@@ -1,9 +1,14 @@
 
 import React from 'react'
+import Form from './Form'
+import { HeaderContainer, MainHeader } from './HeaderStyles'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <HeaderContainer>
+      <MainHeader>Food App</MainHeader>
+      <Form/>
+    </HeaderContainer>
   )
 }
 

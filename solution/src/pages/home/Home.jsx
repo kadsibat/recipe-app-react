@@ -1,10 +1,23 @@
+import React, { useState } from "react";
+import Header from "../../components/header/Header";
 
-import React from 'react'
+
+const mealTypes=["Breakfast","Lunch","Dinner","Snack","Teatime"]
+const API_ID = "527e8465"
+const API_KEY = "aa32963a754d1bcda57f3e5648211fd8"
+
+
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+const [recipes, setRecipes] = useState()
 
-export default Home
+
+
+  return (
+    <div>
+      <Header />
+    </div>
+  );
+};
+
+export default Home;

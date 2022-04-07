@@ -1,9 +1,15 @@
 
 import React from 'react'
+import { FormContainer, SearchButton, SearchInput, Select } from './HeaderStyles'
 
 const Form = () => {
   return (
-    <div>Form</div>
+    <FormContainer>
+      <SearchInput/>
+      <SearchButton>Search</SearchButton>
+      <Select></Select>
+
+    </FormContainer>
   )
 }
 
