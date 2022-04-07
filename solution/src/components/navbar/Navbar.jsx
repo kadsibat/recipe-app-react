@@ -1,14 +1,16 @@
 
 import React from 'react'
+import {Nav} from "./NavbarStyles"
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <div className="header">Recipe App</div>
+    <Nav >
+      {/* <div className="header">Recipe App</div>
       <div className="pages">
-        <
-      </div>
-    </div>
+        <link>about</link>
+        <link>about</link>
+      </div> */}
+    </Nav>
   )
 }
 
