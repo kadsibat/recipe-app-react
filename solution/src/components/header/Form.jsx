@@ -1,29 +1,23 @@
 import React from "react";
-import {
-  FormContainer,
-  SearchButton,
-  SearchInput,
-  Select,
-} from "./HeaderStyles";
+import { Button, FoodInput, FormContainer, Select } from "./HeaderStyles";
 
-const Form = ({ setQuery, query, getData, meal, setMeal, mealTypes }) => {
-
-  const handleSubmit = (e) =>
-    e.preventDefault()
-    getData()
+const Form = ({ setQuery, getData, setMeal, mealTypes }) => {
+  const handleSubmit = (e) => e.preventDefault();
+  getData();
 
   return (
     <FormContainer onSubmit={handleSubmit}>
-      <SearchInput
-        placeholder="Search Food"
+      <FoodInput
+        type="text"
+        placeholder="Search"
         onChange={(e) => setQuery(e.target.value)}
       />
-      <SearchButton type="submit">Search</SearchButton>
-      <Select
-      onChange={(e) => setMeal(e.target.value)}
-      >
+      <Button type="submit">Search</Button>
+      <Select onChange={(e) => setMeal(e.target.value)}>
         {mealTypes?.map((item, index) => (
-          <option key={index} value={item}>{item}</option>
+          <option key={index} value={item.toLowerCase}>
+            {item}
+          </option>
         ))}
       </Select>
     </FormContainer>
