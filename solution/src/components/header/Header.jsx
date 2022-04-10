@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react'
+import {HeaderContainer, MainHeader} from "./HeaderStyles";
 import Form from "./Form";
-import { HeaderContainer, MainHeader } from "./HeaderStyles";
-
-const Header = ({ setQuery, getData, setMeal, mealTypes }) => {
+const Header = ({setQuery,setMeal,getData,mealTypes}) => {
   return (
-    <HeaderContainer>
-      <MainHeader>Food App</MainHeader>
-      <Form
-        setQuery={setQuery}
-        getData={getData}
-        setMeal={setMeal}
-        mealTypes={mealTypes}
-      />
-    </HeaderContainer>
-  );
-};
+   <HeaderContainer>
+<MainHeader>Food App</MainHeader>
 
-export default Header;
+<Form  setQuery={setQuery}
+getData={getData}
+mealTypes={mealTypes}
+setMeal={setMeal}
+/>
+
+   </HeaderContainer>
+  )
+}
+
+export default Header
